@@ -5,11 +5,7 @@ import { ToastContainer } from "react-toastify";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <GoogleOAuthProvider
-      clientId={
-        "601004124281-d13pl3ha3ubepk8and5gegh4mjnfhdoo.apps.googleusercontent.com"
-      }
-    >
+    <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!}>
       <ToastContainer />
       <Component {...pageProps} />
     </GoogleOAuthProvider>

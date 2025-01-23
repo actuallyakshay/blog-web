@@ -1,40 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Frontend for Blog Application
+
+This is a [Angular](https://angular.io) project designed to provide a responsive user interface for a blog platform. The application integrates Google login for user authentication and interacts with a NestJS backend for managing posts.
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
+yarn
+```
+
+Then, run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the app by modifying `src/app/`. The application supports live reloading, so changes will be reflected automatically in the browser.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- **Login with Google**: Secure user authentication using `react-oauth/google`.
+- **Dashboard**: View all posts created by the logged-in user.
+- **Create Post**: Allows users to add new posts.
+- **Post Details**: View details of any post. Accessible to all users.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## API Routes
 
-## Learn More
+The app integrates with the following backend endpoints:
 
-To learn more about Next.js, take a look at the following resources:
+- **POST /login**: Authenticate users via Google/Facebook and retrieve a JWT.
+- **GET /posts**: Fetch the list of posts.
+- **POST /posts/create**: Create a new post.
+- **GET /posts/\*\***:id\*\*: Fetch details of a specific post.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+The production-ready files will be in the `dist/` directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Feedback
 
-## Deploy on Vercel
+For feedback or support, please contact [[akshay.rajput1197@gamil.com](mailto:akshay.rajput1197@gamil.comØ)].
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
